@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import './App.css';
+import HouseList from './components/house-list'
 
 // need unique key to help react find stuff faster. 
 
@@ -14,11 +15,11 @@ function Houses({
   )
 }
 
-function House ({
-  name,
-}) {
-  return <div key={name}>{name}</div>
-}
+// function House ({
+//   name,
+// }) {
+//   return <div key={name}>{name}</div>
+// }
 
 class App extends Component {
   constructor() { // used to define private variables just for that class you're using
@@ -42,7 +43,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Houses  houses={this.state.houses}/> 
+        <HouseList houses={this.state.houses}/> 
       </div>
     );
   }
